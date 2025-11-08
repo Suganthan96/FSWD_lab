@@ -1,1 +1,16 @@
-gdf
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Microblog</title>
+</head>
+<body>
+  <h1>Microblog</h1>
+  <form action="/api/posts" method="POST">
+    <input type="text" name="title" placeholder="Title" required><br>
+    <textarea name="content" placeholder="Content" required></textarea><br>
+    <button type="submit">Create Post</button>
+  </form>
+  <div id="posts"></div>
+  <script src="script.js"></script>
+</body>
+</html>
