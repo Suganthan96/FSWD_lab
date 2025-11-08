@@ -1,0 +1,13 @@
+<h1>Food Order</h1>
+
+<form action="/" method="POST">
+  <select name="dish">
+    <% items.forEach(i => { %>
+      <option value="<%= i.dish %>"><%= i.dish %> - ₹<%= i.price %></option>
+    <% }) %>
+  </select>
+  <input type="number" name="quantity" min="1" required>
+  <button type="submit">Order</button>
+</form>
+
+<a href="/cart">Go to Cart</a>

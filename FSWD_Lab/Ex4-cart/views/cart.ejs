@@ -1,0 +1,21 @@
+<h1>Your Cart</h1>
+<table border="1">
+<tr><th>Dish</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+
+<% let grand=0;
+cart.forEach(c => { 
+  const total = c.qty * c.price;
+  grand += total;
+%>
+<tr>
+<td><%= c.dish %></td>
+<td><%= c.qty %></td>
+<td>₹<%= c.price %></td>
+<td>₹<%= total %></td>
+</tr>
+<% }) %>
+
+<tr><td colspan="3">Grand Total</td><td>₹<%= grand %></td></tr>
+</table>
+
+<a href="/">Back</a>
